@@ -19,7 +19,7 @@ Make script executable:
 
 ``chmod +x ~/local/share/check_mk/notifications/checkmk_matrix_notification.py``
 
-Edit script and configure values for MATRIXHOST (your.homeserver.example) and MATRIXTOKEN (The accesstoken you retrieved for your monitoring user):
+Edit script and configure values for MATRIXHOST (https://your.homeserver.example) and MATRIXTOKEN (The accesstoken you retrieved for your monitoring user):
 
 ``edit ~/local/share/check_mk/notifications/checkmk_matrix_notification.py``
 
