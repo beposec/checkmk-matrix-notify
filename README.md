@@ -19,6 +19,10 @@ Make script executable:
 
 ``chmod +x ~/local/share/check_mk/notifications/checkmk_matrix_notification.py``
 
+Edit script and configure values for MATRIXHOST (your.homeserver.example) and MATRIXTOKEN (The accesstoken you retrieved for your monitoring user):
+
+``edit ~/local/share/check_mk/notifications/checkmk_matrix_notification.py``
+
 # Setup Notification
 - Under *Setup > Events > Notification configuration* click *Add rule*
 - Insert a description name for the rule and choose notification method *Matrix*
