@@ -53,6 +53,16 @@ Comment:  $NOTIFICATIONCOMMENT$
 """
 
 
+def validate_room_id(MATRIXROOM):
+    # Validation of given room id
+    room_id_pattern = (r"(![a-zA-Z]+):(([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,})")
+    if not re.match(room_id_pattern, MATRIXROOM):
+        sys.exit(
+            "The given value '%s' is not a proper [matrix] room id."
+            % MATRIXROOM
+        )
+
+
 def substitute_context(template, context):
     # Replace all known variables
     for varname, value in context.items():
@@ -144,6 +154,7 @@ def send_matrix_message(text):
 
 
 def main():
+    validate_room_id(MATRIXROOM)
     context = fetch_notification_context()
     text = construct_message_text(context)
     send_matrix_message(text)
